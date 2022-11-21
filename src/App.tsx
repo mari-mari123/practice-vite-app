@@ -1,9 +1,9 @@
 import { FC, useState } from 'react';
 import reactLogo from './assets/react.svg'
-import './App.css':
+import './App.css'
 
 const title = import.meta.env.VITE_APP_TITLE;
-console.dir(import.meta.env);
+console.dir(import.meta.env)
 
 const App: FC = () => {
   const [count, setCount] = useState(0);

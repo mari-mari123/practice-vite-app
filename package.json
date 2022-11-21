@@ -16,7 +16,7 @@
     "format": "prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,html,json,gql,graphql}'",
     "fix": "npm run --silent format; npm run --silent lint:fix",
     "preinstall": "npx typesync || :",
-    "pre-commit": "npx lint-staged || :"
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -64,6 +64,6 @@
     ]
   },
   "simple-git-hooks": {
-    "pre-commit": "npm run lint-staged"
+    "pre-commit": "npx run lint-staged"
   }
 }
