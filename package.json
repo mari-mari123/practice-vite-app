@@ -11,12 +11,12 @@
     "lint:es:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:style": "stylelint 'src/**/*.{css,less,sass,scss}'",
     "lint:style:fix": "stylelint --fix 'src/**/*.{css,less,sass,scss}'",
-    "lint": "npx run --silent lint:style; npx run --silent lint:es",
-    "lint:fix": "npx run --silent lint:style:fix; npx run --silent lint:es:fix",
+    "lint": "npm run --silent lint:style; npm run --silent lint:es",
+    "lint:fix": "npm run --silent lint:style:fix; npm run --silent lint:es:fix",
     "format": "prettier --write --loglevel=warn 'src/**/*.{js,jsx,ts,tsx,html,json,gql,graphql}'",
-    "fix": "npx run --silent format; npx run --silent lint:fix",
+    "fix": "npm run --silent format; npm run --silent lint:fix",
     "preinstall": "npx typesync || :",
-    "prepare": "npx simple-git-hooks || :"
+    "pre-commit": "npx lint-staged || :"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -64,6 +64,6 @@
     ]
   },
   "simple-git-hooks": {
-    "pre-commit": "npx run lint-staged"
+    "pre-commit": "npm run lint-staged"
   }
 }
